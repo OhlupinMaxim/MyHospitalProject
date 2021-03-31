@@ -8,10 +8,10 @@ import org.postgresql.ds.PGConnectionPoolDataSource;
 
 
 public abstract class DAO<E>{
-    private static final Dotenv dotenv = Dotenv.load();
     protected final String cav = "\'";
     private PGConnectionPoolDataSource poolDataSource;
     public DAO () throws SQLException {
+        final Dotenv dotenv = Dotenv.load();
         poolDataSource = new PGConnectionPoolDataSource();
         poolDataSource.setDatabaseName(dotenv.get("DATABASE"));
         poolDataSource.setUser(dotenv.get("DATABASE_USER"));

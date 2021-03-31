@@ -10,7 +10,7 @@ import model.People;
 
 import java.sql.SQLException;
 
-//import static org.hospital.MyUI.EDITPATIENTVIEW;
+import static org.hospital.MyUI.EDITPATIENTVIEW;
 
 
 public class PatientView extends VerticalLayout implements View {
@@ -113,7 +113,7 @@ public class PatientView extends VerticalLayout implements View {
 
         Button update = new Button("Изменить", (Button.ClickListener)
                 clickEvent -> {
-//                    getUI().getNavigator().navigateTo(EDITPATIENTVIEW);
+                    getUI().getNavigator().navigateTo(EDITPATIENTVIEW);
                     //UI.getCurrent().getPage().reload();
                 });
         addComponents(update,delete);

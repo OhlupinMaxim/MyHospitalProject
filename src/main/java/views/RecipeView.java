@@ -155,7 +155,7 @@ public class RecipeView extends VerticalLayout implements View {
 
         Button filter = new Button("Фильтр", (Button.ClickListener)
                 clickEvent -> {
-//                    getUI().getNavigator().navigateTo(FILTERVIEW);
+                    getUI().getNavigator().navigateTo(FILTERVIEW);
                     //UI.getCurrent().getPage().reload();
                 });
         addComponents(update, delete);
